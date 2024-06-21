@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario y Validaciones</title>
+<style>
+.error { color: red; }
+</style>
+</head>
+<body>
+
+<h2>Formulario de Registro</h2>
+<form id="registroForm" onsubmit="return validarFormulario()">
+  <label for="nombre">Nombre:</label><br>
+  <input type="text" id="nombre" name="nombre"><br>
+  <span id="errorNombre" class="error"></span><br>
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email"><br>
+  <span id="errorEmail" class="error"></span><br>
+
+  <label for="contrasena">Contraseña:</label><br>
+  <input type="password" id="contrasena" name="contrasena"><br>
+  <span id="errorContrasena" class="error"></span><br>
+  
+  <label for="contrasena">repita Contraseña:</label><br>
+  <input type="password" id="contrasena" name="contrasena"><br>
+  <span id="errorContrasena" class="error"></span><br>
+
+  <input type="submit" value="Registrarse">
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>

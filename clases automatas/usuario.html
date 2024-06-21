@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario y Validaciones</title>
+<style>
+.error { color: red; }
+
+/* Estilo para dividir el formulario en dos columnas */
+.form-column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-column .form-group {
+  width: 45%; /* Ancho de cada columna */
+}
+</style>
+</head>
+<body>
+
+<h2>usuario</h2>
+<form id="registroForm" onsubmit="return validarFormulario()">
+  <div class="form-column">
+    <div class="form-group">
+      <label for="nombre">datos personales</label><br> 
+      <input type="text" id="nombre" name="nombre"><br>
+      <span id="errorNombre" class="error"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="codigo">código</label><br>
+      <input type="text" id="codigo" name="codigo"><br>
+      <span id="errorCodigo" class="error"></span><br>
+    </div>
+  </div>
+
+  <label for="email">DNI</label><br>
+  <input type="email" id="email" name="email"><br>
+  <span id="errorEmail" class="error"></span><br>
+
+  <label for="contrasena">telefono</label><br>
+  <input type="password" id="contrasena" name="contrasena"><br>
+  <span id="errorContrasena" class="error"></span><br>
+
+  <input type="submit" value="Registrarse">
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>
